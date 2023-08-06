@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("*********************************************************************");
+        System.out.println(" !!!! Welcome to Random Guess Game !!!!");
+        System.out.println("*********************************************************************");
+        System.out.println("\t\t\t\tRules & Regulation\n");
+        System.out.println("1.System will generate a random number you have to guess the correct number");
+        System.out.println("2.Numbers are between 1 to 100");
+        System.out.println("3.If your guessed number is greater than random number then system will say 'Number is greater try again' ");
+        System.out.println("4.If your guessed number is smaller than random number then system will say 'Number is smaller try again' ");
+        System.out.println("5.When your number matches with the random number then you won the Game\n");
+
+        System.out.println("*********************************************************************");
+        System.out.println(" \n!!!! Now lets play !!!!\n");
+        System.out.println("*********************************************************************");
+
+        int number=(int)(Math.random()*100);
+
+        int i=0;
+        while(true){
+
+            System.out.println("\nGuess the correct number\n");
+            System.out.print("Enter number :");
+            int a=sc.nextInt();
+            if(a==number){
+                System.out.println("\n\n You Won !!!!!!!\n***********Congratulations ***********\n\n\n");
+                System.out.println("You tried for "+i+" times");
+                break;
+            }
+            else if(a<number){
+                System.out.println("Your Entered Number is smaller try again");
+                i++;
+                System.out.println("try again !!\n");
+            }
+            else{
+                System.out.println("Your Entered Number is greater try again");
+                i++;
+                System.out.println("try again !!\n");
+            }
+
+
+
+        }
+    }
+}
